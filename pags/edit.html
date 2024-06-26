@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <script src="../scripts/_action.js"></script>
+    <link rel="stylesheet" href="../styles/styles.css"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <title>Editar</title>
+</head>
+<body>
+    <button onclick="home()">
+      <header class="header" style="background-image: url('../icons/logo-removebg-preview\ 1.png');">
+          Editar Dados da Agenda
+    </header>
+  </button>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      var id = params.get('id');
+      loadEdit(Number(id));
+      function clikOnUp(){
+        update(parseInt(id));
+      }
+
+      function clikOnUpDelete(){
+        deletar(parseInt(id), 'clientes');
+        // apagarBancoDeDados();
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+         const datePicker = document.getElementById('data');
+
+        datePicker.addEventListener('change', (event) => {
+        const selectedDate = event.target.value;
+        findDate(selectedDate);
+    });
+
+
+});
+    </script>
+    <label id="name"></label>
+    <label>Numero de contato</label>
+<input class="input_client_classic" type="number" required placeholder="Número para Contato" id="numero"/> 
+   <label>Tipo de Cílios</label>
+  <select id="tipo" class="option" >
+    <option value="0">Escolha um Modelo</option>
+    <option value="Classico">Classico</option>
+    <option value="Egipcio">Egípcio</option>
+    <option value="Brasileiro">Brasileiro</option>
+  </select>
+
+  <div class="elementsunit">
+    <input type="text" class="unitComponent" placeholder="Curvatura" id="curvatura"/>
+    <input type="text" class="unitComponent" placeholder="Espessura" id="espessura"/>
+  </div>  
+
+  <div class="elementsunit">
+    <input type="text" class="unitComponent" placeholder="Marca dos Fios" id="marca_fios"/>
+    <input type="text" class="unitComponent" placeholder="Comprimento" id="comprimento"/>
+  </div>  
+
+  <div class="elementsunit">
+    <input type="text" class="unitComponent" placeholder="Mapping" id="mapping"/>
+    <input type="text" class="unitComponent" placeholder="Cola Utilizada" id="cola"/>
+ </div> 
+
+    <label> Selecione a Data Desejada</label>
+    <input type="date" onkeyup="" class="option" id="data"/>
+    <div id="resultData" style="display: flex; flex-direction: column;"></div>
+    <label> Selecione o Horário Desejado</label>
+  <input type="time" class="option" id="hora"/>
+
+  <input type="number" class="input_client_classic" placeholder="Valor Combinado $" id="valor"/>
+
+
+  <button type="button" onclick="clikOnUp()" class="actions_button_blue" style="margin: 50px;">Salvar</button>
+  <button type="button" onclick="clikOnUpDelete()" class="actions_button_red" style="margin: 50px;">Excluir Cliente</button>
+  
+</body>
+</html>

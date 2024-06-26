@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../styles/styles.css"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <script src="../scripts/_action.js"></script>
+    
+    <title>Agendar Horário</title>
+</head>
+<body>
+    <button onclick="home()">
+        <header class="header" style="background-image: url('../icons/logo-removebg-preview\ 1.png');">
+            AGENDAR HORÁRIO
+    </header>
+    </button>
+   
+    
+    <div class="buttons">
+     <button class="button-component" onclick="pagNewClient();" style="background-image: url('../icons/typcn_user.png');">Nova Cliente</button>
+   </div>
+   
+   <input class="search" type="text"  id="search" onkeyup="filterClient()" placeholder="Pesquise o nome da sua Cliente" style="background-image: url('../icons/material-symbols-light_search.png');"/>
+
+   <label style="padding-top: 50px; color: gray;">Minhas Clientes</label>
+   <script>
+    resultGetInfoClient();
+   </script>
+   <div id="cards">
+   
+   </div>
+
+
+</body>
+</html>

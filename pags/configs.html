@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../styles/styles.css"> 
+    <script src="../scripts/_action.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <title>Configurações
+    </title>
+</head>
+<body>
+  <button onclick="home()">
+    <header class="header" style="background-image: url('../icons/logo-removebg-preview\ 1.png');">
+        CONFIGUAÇÕES
+   </header>
+   </button>
+
+    
+  
+    <h1>Escolha um Arquivo para importar</h1>
+
+    <input class="inputFile" type="file" id="fileInput" accept=".json" />
+
+
+    <button class="option" onclick="importData()">Importar</button>
+
+
+  
+
+  <button id="backupBtn" style="margin-top: 150px;" class="actions_button_blue" onclick="backupData()">Fazer Backup</button>
+
+</body>
+</html>

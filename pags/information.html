@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <script src="../scripts/_action.js"></script>
+    <link rel="stylesheet" href="../styles/styles.css"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <title>Informações</title>
+</head>
+<body>
+
+    <button onclick="home()">
+    <header class="header" style="background-image: url('../icons/logo-removebg-preview\ 1.png');">
+       INFORMAÇÕES
+   </header>
+    </button>
+
+
+   <script>
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get('id');
+        getAllUser(Number(id));
+    </script>
+
+<div id="cards">
+           
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME LASH</title>
+    <script src="../scripts/_action.js"></script>
+    <link rel="stylesheet" href="../styles/styles.css"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+<body>
+  
+ <header class="header" style="background-image: url('../icons/logo-removebg-preview\ 1.png');">
+     HOME LASH
+</header>
+
+ 
+ <div class="buttons">
+    <button class="button-component" onclick="pagAgends();" style="background-image: url('../icons/mdi_alarm-clock-add.png');">Agendar Horário</button>
+</div>
+
+<input type="text" class="search" id="searchInput" onkeyup="filterResults()" placeholder="Pesquise o nome da sua Cliente" style="background-image: url('../icons/material-symbols-light_search.png');"/>
+
+<label style="padding-top: 50px; color: gray;">Agenda</label>
+
+<script>
+    exibir();
+</script>
+
+<div id="cards">
+
+
+</div>
+
+<footer>
+    <button class="button-footer" onclick="configurate();" style="background-image: url('../icons/icon-park-outline_config.png');" />
+</footer>
+
+</body>
+</html>

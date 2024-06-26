@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <script src="../scripts/_action.js"></script>
+    <link rel="stylesheet" href="../styles/styles.css"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <title>Novo Cliente</title>
+</head>
+<body>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+         const datePicker = document.getElementById('data');
+
+        datePicker.addEventListener('change', (event) => {
+        const selectedDate = event.target.value;
+        findDate(selectedDate);
+    });
+  });
+  </script>
+  <button onclick="home()">
+    <header class="header" style="background-image: url('../icons/logo-removebg-preview\ 1.png');">
+        NOVA CLIENTE
+   </header>
+  </button>
+    <input class="input_client_classic" type="text" maxlength="30" required placeholder="Nome Completo" id="nome"/>
+    <input class="input_client_classic" type="text" required placeholder="CPF" id="cpf"/>
+    <label> Selecione a Data de Nascimento</label>
+    <input type="date" class="option" id="nascimento"/>   
+    <input class="input_client_classic" type="number" required placeholder="Número para Contato" id="numero"/> 
+ <label>Tipo de Cílios</label>
+  <select id="tipo" class="option" >
+    <option value="">Escolha um Modelo</option>
+    <option value="Classico">Classico</option>
+    <option value="Egipcio">Egípcio</option>
+    <option value="Brasileiro">Brasileiro</option>
+  </select>
+
+  <div class="elementsunit">
+    <input type="text" class="unitComponent" placeholder="Curvatura" id="curvatura"/>
+    <input type="text" class="unitComponent" placeholder="Espessura" id="espessura"/>
+  </div>  
+
+  <div class="elementsunit">
+    <input type="text" class="unitComponent" placeholder="Marca dos Fios" id="marca_fios"/>
+    <input type="text" class="unitComponent" placeholder="Comprimento" id="comprimento"/>
+  </div>  
+
+  <div class="elementsunit">
+    <input type="text" class="unitComponent" placeholder="Mapping" id="mapping"/>
+    <input type="text" class="unitComponent" placeholder="Cola Utilizada" id="cola"/>
+ </div> 
+
+    <label> Selecione a Data Desejada</label>
+    <input type="date" class="option" id="data"/>
+    <div id="resultData" style="display: flex; flex-direction: column;"></div>
+    <label> Selecione o Horário Desejado</label>
+  <input type="time" class="option" id="hora"/>
+
+  <input type="number" class="input_client_classic" placeholder="Valor Combinado $" id="valor"/>
+
+  <button type="button" class="actions_button_blue" onclick="cadastrar()" style="margin: 50px;">Salvar</button>
+
+</body>
+</html>

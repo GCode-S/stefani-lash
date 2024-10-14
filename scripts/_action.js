@@ -296,7 +296,7 @@ async  function cadastrarClient(){
     var regs = {
         nome: document.getElementById("nome").value,
         cpf: uniqueRandom, 
-        data: document.getElementById("nascimento").value,
+        data: Date.now(),
         numero: document.getElementById("numero").value,
         tipo: document.getElementById("tipo").value,
         curvatura: document.getElementById("curvatura").value,

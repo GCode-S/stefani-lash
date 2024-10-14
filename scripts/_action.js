@@ -309,7 +309,7 @@ async  function cadastrarClient(){
 
     };
 
-    if (regs.nome.length == 0 || regs.cpf.length == 0){
+    if (regs.nome.length == 0){
         console.log("nome vazio");
         alert("preencha os campos necessários para continuar.")
         return

@@ -292,10 +292,10 @@ async  function cadastrarClient(){
     const db = await openDB();
 
     return new Promise ((res, rej)=>{
-    // const uniqueRandom = () => Math.floor(Math.random() * Date.now());
+    const uniqueRandom = Math.floor(Math.random() * Date.now());
     var regs = {
         nome: document.getElementById("nome").value,
-        cpf:  Math.floor(Math.random() * Date.now()), 
+        cpf: uniqueRandom , 
         data: 0,
         numero: document.getElementById("numero").value,
         tipo: document.getElementById("tipo").value,
